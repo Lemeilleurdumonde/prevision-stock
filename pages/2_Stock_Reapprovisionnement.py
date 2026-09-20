@@ -49,7 +49,7 @@ def _style_risque(valeur):
 # récentes de pandas (au profit de .map) mais reste fonctionnel ; on le
 # garde ici pour la compatibilité avec un plus large éventail de versions.
 st.dataframe(
-    tableau_affiche.style.applymap(_style_risque, subset=["Risque de rupture"]),
+    tableau_affiche.style.map(_style_risque, subset=["Risque de rupture"]),
     use_container_width=True,
     hide_index=True,
 )
